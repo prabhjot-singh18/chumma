@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AR Navigation</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+</head>
+<body style="margin: 0; overflow: hidden;">
+    <a-scene embedded arjs>
+        <!-- Define the marker and the arrow entity -->
+        <a-marker preset="hiro">
+            <a-box position='0 0.5 0' material='color: red;' scale="0.5 0.5 0.5"></a-box>
+        </a-marker>
+        <a-entity camera></a-entity>
+    </a-scene>
+
+    <div id="controls">
+        <label for="start">Start Point:</label>
+        <select id="start">
+            <option value="A">A</option>
+            <option value="B">B</option>
+            <option value="C">C</option>
+        </select>
+
+        <label for="end">End Point:</label>
+        <select id="end">
+            <option value="A">A</option>
+            <option value="B">B</option>
+            <option value="C">C</option>
+        </select>
+
+        <button onclick="updateDirection()">Set Destination</button>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

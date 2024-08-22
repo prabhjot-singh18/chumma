@@ -1,0 +1,9 @@
+function updateDirection() {
+    const start = document.getElementById('start').value;
+    const end = document.getElementById('end').value;
+
+    console.log(`Navigating from ${start} to ${end}`);
+    
+    // In a more advanced implementation, this function would adjust the arrow's position and rotation
+    // based on real-time data and calculations.
+}
